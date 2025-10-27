@@ -18,7 +18,14 @@
       background: linear-gradient(180deg, #c8e4f8 0%, #ffffff 100%);
       color: #000;
     }
-
+    
+    /* === CONTAINER ===
+       Wadah utama halaman yang menampung semua elemen seperti header, info box, tabel, dan footer.
+       Lebar 85% dari layar dan maksimum 1000px agar halaman terlihat rapi di layar besar.
+       Margin auto membuatnya berada di tengah halaman secara horizontal.
+       Background biru sangat muda memberi kesan lembut.
+       Border-radius dan box-shadow membuat kotak terkesan modern dan menonjol.
+       Border biru tua memberi kesan formal dan menegaskan batas container. */
     .container {
       width: 85%;
       max-width: 1000px;
@@ -30,7 +37,11 @@
       border: 3px solid #1c5fa6;
     }
 
-    /* ===== HEADER ===== */
+     /* === HEADER ===
+       Bagian ini menampilkan logo, judul utama, subjudul, dan label tahun/semester.
+       Latar dibuat gradasi dari biru tua ke biru muda supaya terlihat menarik.
+       Teks berwarna putih dan rata tengah agar menonjol dari background.
+       Padding memberikan jarak atas-bawah dan kanan-kiri supaya konten header tidak menempel ke tepi container. */
     .header {
       background: linear-gradient(90deg, #1c5fa6, #46a8e0);
       color: white;
@@ -39,24 +50,28 @@
       position: relative;
     }
 
+    /* Logo header diatur agar tampil di tengah dengan lebar tetap 130px */
     .header img {
       display: block;
       margin: 0 auto 18px auto;
       width: 130px;
     }
 
+    /* Judul utama header "JUMLAH PENDUDUK" */
     .header h1 {
       margin: 0;
       font-size: 26px;
       font-weight: bold;
     }
 
+    /* Subjudul header "KABUPATEN ACEH TENGAH" */
     .header h2 {
       margin: 5px 0;
       font-size: 20px;
       font-weight: normal;
     }
 
+     /* Label tahun 2024, tampil menonjol dengan warna kuning, huruf tebal, sudut membulat */
     .header .tahun {
       background-color: #ffcc00;
       color: #000;
@@ -67,6 +82,7 @@
       margin-top: 10px;
     }
 
+    /* Label semester, kontras dengan label tahun, warna ungu, teks putih, dan sedikit jarak dari label tahun */
     .header .semester {
       background-color: #8446e0;
       color: #fff;
@@ -77,7 +93,11 @@
       margin-left: 8px;
     }
 
-    /* ===== INFO BOX ===== */
+     /* === INFO BOX ===
+       Bagian ini menampilkan ringkasan data penduduk secara horizontal: total, laki-laki, perempuan.
+       Menggunakan flexbox agar kolom tersebar rata.
+       Latar biru muda memberi kontras dengan header.
+       Teks tebal agar informasi mudah terlihat. */
     .info {
       display: flex;
       justify-content: space-around;
@@ -87,49 +107,64 @@
       font-weight: bold;
     }
 
+    /* Ukuran teks di dalam setiap div info */
     .info div {
       font-size: 16px;
     }
 
+    /* Warna teks khusus untuk total penduduk */
     .info .total {
       color: #0055aa;
     }
 
+    /* Warna teks untuk kolom laki-laki */
     .info .male {
       color: #0077cc;
     }
 
+    /* Warna teks untuk kolom perempuan */
     .info .female {
       color: #d62b70;
     }
 
-    /* ===== TABLE ===== */
+    /* === TABLE ===
+       Bagian ini mengatur tampilan tabel data penduduk per kecamatan.
+       Tabel menggunakan lebar 100% agar memenuhi container.
+       border-collapse membuat garis antar sel menyatu agar rapi.
+       Ukuran font 15px agar data terbaca jelas. */
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 15px;
     }
 
+    /* Sel tabel diberi border tipis, jarak isi agar tidak menempel, dan teks rata tengah */
     th, td {
       border: 1px solid #ccc;
       padding: 8px 10px;
       text-align: center;
     }
 
+     /* Kepala kolom tabel diberi latar biru tua dan teks putih agar menonjol */
     th {
       background-color: #1c5fa6;
       color: white;
     }
 
+     /* Baris genap tabel diberi warna latar biru muda untuk memudahkan pembacaan */
     tr:nth-child(even) {
       background-color: #f4f8ff;
     }
 
+    /* Memberi efek hover, baris tabel berubah warna saat kursor diarahkan */
     tr:hover {
       background-color: #dff0ff;
     }
 
-    /* ===== FOOTER ===== */
+     /* === FOOTER ===
+       Bagian footer menampilkan sumber data.
+       Teks rata tengah, latar biru tua, teks putih, font kecil agar tidak mengganggu isi utama.
+       Link sumber diberi warna putih dan huruf tebal agar terlihat tapi tetap rapi. */
     .footer {
       text-align: center;
       background-color: #1c5fa6;
@@ -147,23 +182,34 @@
   </style>
 </head>
 <body>
+   <!-- === CONTAINER === -->
   <div class="container">
+    <!-- === HEADER === -->
     <div class="header">
+      <!-- Logo Kabupaten Aceh Tengah -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Lambang_Kabupaten_Aceh_Tengah.png" alt="Logo Aceh Tengah">
+      <!-- Judul Utama -->
       <h1>JUMLAH PENDUDUK</h1>
+      <!-- Subjudul -->
       <h2>KABUPATEN ACEH TENGAH</h2>
+      <!-- Label Tahun dan Semester -->
       <div>
         <span class="tahun">Tahun 2024</span>
         <span class="semester">Semester I Tahun 2024</span>
       </div>
     </div>
 
+    <!-- === INFO BOX === -->
     <div class="info">
       <div class="total">JUMLAH PENDUDUK<br><span style="font-size: 22px;">230.771</span></div>
       <div class="male">LAKI-LAKI<br><span style="font-size: 22px;">116.553</span></div>
       <div class="female">PEREMPUAN<br><span style="font-size: 22px;">114.218</span></div>
     </div>
 
+    <!-- === TABLE DATA PENDUDUK ===
+         Bagian tabel menampilkan data per kecamatan.
+         Setiap baris menampilkan jumlah laki-laki, perempuan, dan total.
+         Baris terakhir menampilkan total keseluruhan dengan warna latar berbeda dan huruf tebal. -->
     <table>
       <tr>
         <th>No</th>
@@ -191,10 +237,15 @@
       </tr>
     </table>
 
+      <!-- === FOOTER ===
+         Bagian ini menampilkan sumber data resmi.
+         Teks rata tengah, latar biru tua, teks putih, font kecil agar tidak mengganggu isi utama.
+         Link sumber diberi warna putih dan tebal supaya mudah dibaca dan tetap rapi. -->
     <div class="footer">
       <p>Sumber: <a href="https://humas.acehtengahkab.go.id/penduduk-terbanyak-aceh-tengah-ada-di-kecamatan-bebesen-paling-sedikit-di-kecamatan-atu-lintang/" target="_blank">dukcapil.acehtengahkab.go.id</a></p>
     </div>
-  </div>
+  </div> <!-- Penutup container utama -->
 </body>
 
 </html>
+
